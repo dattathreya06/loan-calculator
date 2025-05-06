@@ -8,7 +8,12 @@ export const useExchangeRates = () => {
     const fetchRates = async () => {
       try {
         const response = await axios.get(
-          `https://v6.exchangerate-api.com/v6/b35832c8e70e420cbf157d92/latest/USD`
+          `https://v6.exchangerate-api.com/v6/b35832c8e70e420cbf157d92/latest/USD`,
+          {
+            headers: {
+              Expect: "", // This removes the Expect header
+            },
+          }
         );
         setRates(response.data.conversion_rates);
       } catch (error) {
