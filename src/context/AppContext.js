@@ -17,7 +17,12 @@ export const AppProvider = ({ children }) => {
   const fetchRates = async () => {
     try {
       const res = await axios.get(
-        `https://v6.exchangerate-api.com/v6/b35832c8e70e420cbf157d92/latest/USD`
+        `https://v6.exchangerate-api.com/v6/b35832c8e70e420cbf157d92/latest/USD`,
+        {
+          headers: {
+            Expect: "", // This removes the Expect header
+          },
+        }
       );
       setExchangeRates(res.data.conversion_rates);
     } catch (err) {
