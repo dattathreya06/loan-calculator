@@ -4,7 +4,7 @@ A fully responsive and theme-toggle-enabled Loan Calculator built using React an
 
 ## 🚀 Live Demo
 
-🌐 [Live Site](https://your-deployed-link.com)
+🌐 [Live Site](https://loan-calculator-knmd.netlify.app/)
 
 ## 📌 Features
 
